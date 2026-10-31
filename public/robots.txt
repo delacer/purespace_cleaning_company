@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://purespacecleaning.co.za/sitemap.xml

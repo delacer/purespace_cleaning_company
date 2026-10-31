@@ -1,0 +1,157 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #202820;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --ink: #202820;
+  --navy: #075b16;
+  --teal: #087a18;
+  --mint: #e8f7df;
+  --soft: #f5faf2;
+  --muted: #687568;
+  --line: #e0eade;
+
+  --primary: #087a18;
+  --primary-dark: #075b16;
+  --primary-light: #75df35;
+  --accent: #e50909;
+  --white: #ffffff;
+
+  --text: #687568;
+  --text-h: #202820;
+  --bg: #ffffff;
+  --border: #e0eade;
+  --code-bg: #f5faf2;
+  --accent-bg: rgba(8, 122, 24, 0.1);
+  --accent-border: rgba(8, 122, 24, 0.4);
+  --social-bg: #f5faf2;
+  --shadow: 0 10px 25px rgba(7, 91, 22, 0.08);
+
+  --sans: "DM Sans", sans-serif;
+  --heading: "Manrope", sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+  color: var(--ink);
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--ink);
+}
+
+code {
+  font-size: 14px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+::selection {
+  background: var(--mint);
+  color: var(--primary-dark);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

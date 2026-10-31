@@ -1,0 +1,238 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+/* =================================
+   PURESPACE GLOBAL STYLES
+   Brand: Green, Red & White
+================================= */
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #202820;
+  background: #ffffff;
+
+  --ink: #202820;
+  --navy: #075b16;
+  --teal: #087a18;
+  --mint: #e8f7df;
+  --soft: #f5faf2;
+  --muted: #687568;
+  --line: #e0eade;
+
+  --primary: #087a18;
+  --primary-dark: #075b16;
+  --primary-light: #75df35;
+  --accent: #e50909;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrap {
+  width: min(1160px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+/* EYEBROW */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* BUTTONS */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.button-primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.button-primary:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  border: 1px solid #b8d2b0;
+  color: var(--ink);
+  background: var(--white);
+}
+
+.button-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* TEXT LINKS */
+
+.text-link,
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.text-link:hover,
+.card-link:hover {
+  gap: 14px;
+  color: var(--accent);
+}
+
+.center-action {
+  text-align: center;
+  margin-top: 35px;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto 46px;
+}
+
+.section-heading h2 {
+  font: 700 clamp(32px, 4vw, 48px) / 1.13 Manrope, sans-serif;
+  letter-spacing: -0.045em;
+  margin: 15px 0;
+  color: var(--ink);
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* PAGE HERO */
+
+.page-hero {
+  padding: 86px 0 78px;
+  background: var(--soft);
+}
+
+.page-hero h1 {
+  font: 800 clamp(42px, 6vw, 68px) / 1.08 Manrope, sans-serif;
+  letter-spacing: -0.055em;
+  margin: 20px 0;
+  color: var(--ink);
+}
+
+.page-hero h1 em {
+  font-style: normal;
+  color: var(--primary);
+}
+
+.page-hero p {
+  max-width: 560px;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* FORMS */
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 13px 14px;
+  outline: none;
+  color: var(--ink);
+  background: var(--white);
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(8, 122, 24, 0.09);
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9aa797;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .page-hero {
+    padding: 65px 0;
+  }
+}
