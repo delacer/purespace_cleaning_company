@@ -10,21 +10,20 @@ cloudinary.config({
 
 export default async () => {
   try {
-    const result = await cloudinary.api.resources_by_asset_folder(
-  "purespace/reviews/pending",
-  {
-    max_results: 100,
-    tags: true,
-  }
-);
+    const result = await cloudinary.api.resources({
+  resource_type: "raw",
+  type: "upload",
+  max_results: 100,
+});
 
 console.log(
-  "Assets found:",
+  "RAW ASSETS FOUND:",
   result.resources.map((asset) => ({
     public_id: asset.public_id,
+    asset_folder: asset.asset_folder,
     resource_type: asset.resource_type,
     tags: asset.tags,
-    url: asset.secure_url,
+    secure_url: asset.secure_url,
   }))
 );
 
